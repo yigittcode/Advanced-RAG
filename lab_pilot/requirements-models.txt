@@ -1,0 +1,3 @@
+# Optional ONLY. Install in the pilot's own environment.
+# Compatibility range, not a tested ARM/CUDA lock; freeze the target environment.
+sentence-transformers>=4.0,<6.0

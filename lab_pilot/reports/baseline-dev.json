@@ -1,0 +1,1369 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-14T17:34:09.067818+00:00",
+  "dataset_note": "Synthetic teaching set; dev/test is NOT an independent production benchmark. Retrieval only; no generation accuracy measured.",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "code_sha256": "3b6e496cf3aa71e2b6391987ca84b76b1f47f6429825e2bc1e5e998803091839",
+  "corpus_sha256": "45ef3aa845cd410857d7c3235c37475e51ce4f13c58753785828b7e1290fd74b",
+  "corpus_files": [
+    {
+      "source": "01_erisim.md",
+      "sha256": "08b691195f752530df5e39c63f1a957773408edd0d5b608af56887cdad537f07"
+    },
+    {
+      "source": "02_veri.md",
+      "sha256": "a64d2ec2628a6d0a2ed6251a61e8b514c5a9cee49b048929b9b2407dc8ca17d9"
+    },
+    {
+      "source": "03_rag.md",
+      "sha256": "7242f20c13e2da889272acf0622a81f38e7916c580271364431ddbf8df3a5300"
+    },
+    {
+      "source": "04_olcum.md",
+      "sha256": "bd666749cf2d9a2aba8cf6e7ac59a35851e1584676a52f9196959873a3f0ceba"
+    },
+    {
+      "source": "05_inference.md",
+      "sha256": "6f8e4e4720da88e9ec8d9d6419576aac7bf30f909096997e985fb0f28fe2f01e"
+    },
+    {
+      "source": "06_proje.md",
+      "sha256": "ebf8d7b1a323b12d900900c5b4413065525ab8484a71d41ceff2cdb3510f8c55"
+    },
+    {
+      "source": "07_isletim.md",
+      "sha256": "10f9e14534ebd58dbadd33c00404af6c530c467192aea35d06ecd2a4ecbab7e7"
+    },
+    {
+      "source": "08_ag.md",
+      "sha256": "245248cb59610a5e08f492276e13a0af53259d65d3e4b3500f2d39516b94a9e3"
+    }
+  ],
+  "queries_sha256": "6b67455ae78deebb6a244a051463db8bef23432965e1ab781aa04950b61451c1",
+  "config": {
+    "split": "dev",
+    "k": 5,
+    "candidates": 20,
+    "chunk_words": 110,
+    "overlap": 20,
+    "chunks": 24,
+    "hyde": false,
+    "decompose": false,
+    "rrf_constant": 60,
+    "dense_device": null,
+    "e5_prefix": null,
+    "dense_model": null,
+    "reranker": null,
+    "llm_model": null
+  },
+  "results": {
+    "bm25": {
+      "summary": {
+        "recall@5": 1.0,
+        "mrr@5": 0.8056,
+        "ndcg@5": 0.861,
+        "all_evidence_sections@5": 1,
+        "evidence_recall@5": 1.0,
+        "answerable_count": 12,
+        "unanswerable_count": 4,
+        "negative_candidate_rate": 0.5,
+        "latency_p50_ms": 0.045,
+        "latency_p95_ms": 0.106,
+        "llm_calls": 0
+      },
+      "queries": [
+        {
+          "id": "d01",
+          "question": "GPU rezervasyonu kaç saat sürebilir?",
+          "category": "direct",
+          "relevant": [
+            "01_erisim.md#rezervasyon"
+          ],
+          "retrieved": [
+            {
+              "section_id": "01_erisim.md#rezervasyon",
+              "chunk_id": "75b8639cf35004a4d00f",
+              "score": 6.628204
+            },
+            {
+              "section_id": "07_isletim.md#bakim",
+              "chunk_id": "962a327e6c8bfc0c2ae9",
+              "score": 4.341337
+            },
+            {
+              "section_id": "01_erisim.md#giris",
+              "chunk_id": "dc07a000c3b3757fea1b",
+              "score": 2.799927
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.045,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d02",
+          "question": "İlk laboratuvar erişimi için hangi onay gerekir?",
+          "category": "direct",
+          "relevant": [
+            "01_erisim.md#giris"
+          ],
+          "retrieved": [
+            {
+              "section_id": "01_erisim.md#giris",
+              "chunk_id": "dc07a000c3b3757fea1b",
+              "score": 5.91813
+            },
+            {
+              "section_id": "07_isletim.md#ariza",
+              "chunk_id": "8401b85e230975a80da4",
+              "score": 2.316867
+            },
+            {
+              "section_id": "04_olcum.md#metrik",
+              "chunk_id": "1cab9ed4f1d94102223c",
+              "score": 1.889916
+            },
+            {
+              "section_id": "04_olcum.md#olumsuz",
+              "chunk_id": "d788c56e06108a1c4c5b",
+              "score": 1.743978
+            },
+            {
+              "section_id": "04_olcum.md#bolme",
+              "chunk_id": "53769e2b0123b06f620d",
+              "score": 1.725435
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.074,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d03",
+          "question": "Günlükler kaç gün saklanır?",
+          "category": "direct",
+          "relevant": [
+            "02_veri.md#saklama"
+          ],
+          "retrieved": [
+            {
+              "section_id": "02_veri.md#saklama",
+              "chunk_id": "4cd0ef32fec1433a6667",
+              "score": 5.093568
+            },
+            {
+              "section_id": "03_rag.md#guncelleme",
+              "chunk_id": "890d8ea133f7a18033c8",
+              "score": 2.245246
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.106,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d04",
+          "question": "Kişisel verileri model servisine göndermeden önce ne yapılır?",
+          "category": "procedure",
+          "relevant": [
+            "02_veri.md#kisisel"
+          ],
+          "retrieved": [
+            {
+              "section_id": "05_inference.md#hata",
+              "chunk_id": "ab0eb4c68b2d8b1ab1c5",
+              "score": 4.338527
+            },
+            {
+              "section_id": "02_veri.md#kisisel",
+              "chunk_id": "66ac5acf676584b5799f",
+              "score": 3.694036
+            },
+            {
+              "section_id": "05_inference.md#baglanti",
+              "chunk_id": "2a19e7f6ac25ee197544",
+              "score": 3.348225
+            },
+            {
+              "section_id": "06_proje.md#karsilastirma",
+              "chunk_id": "3127154ce4c7c93c43c4",
+              "score": 2.626241
+            },
+            {
+              "section_id": "04_olcum.md#bolme",
+              "chunk_id": "53769e2b0123b06f620d",
+              "score": 1.978308
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 0.5,
+            "ndcg": 0.6309297535714575,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.092,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d05",
+          "question": "Parçalama deneyinde kaç kelime örtüşme kullanılır?",
+          "category": "numeric",
+          "relevant": [
+            "03_rag.md#parcalama"
+          ],
+          "retrieved": [
+            {
+              "section_id": "03_rag.md#parcalama",
+              "chunk_id": "1919b44e72097a7dc480",
+              "score": 14.640522
+            },
+            {
+              "section_id": "08_ag.md#depolama",
+              "chunk_id": "b60f95f4dc189337597c",
+              "score": 2.021293
+            },
+            {
+              "section_id": "02_veri.md#kisisel",
+              "chunk_id": "66ac5acf676584b5799f",
+              "score": 1.978308
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.099,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d06",
+          "question": "MRR neyi ölçer?",
+          "category": "direct",
+          "relevant": [
+            "04_olcum.md#metrik"
+          ],
+          "retrieved": [
+            {
+              "section_id": "04_olcum.md#metrik",
+              "chunk_id": "1cab9ed4f1d94102223c",
+              "score": 7.894312
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.029,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d07",
+          "question": "Model belleğinde ağırlıklar dışında neler yer kaplar?",
+          "category": "paraphrase",
+          "relevant": [
+            "05_inference.md#bellek"
+          ],
+          "retrieved": [
+            {
+              "section_id": "05_inference.md#baglanti",
+              "chunk_id": "2a19e7f6ac25ee197544",
+              "score": 1.65872
+            },
+            {
+              "section_id": "05_inference.md#hata",
+              "chunk_id": "ab0eb4c68b2d8b1ab1c5",
+              "score": 1.566613
+            },
+            {
+              "section_id": "05_inference.md#bellek",
+              "chunk_id": "9fd31bcc540b04907891",
+              "score": 1.433908
+            },
+            {
+              "section_id": "08_ag.md#port",
+              "chunk_id": "523024dec899411d36d7",
+              "score": 1.283697
+            },
+            {
+              "section_id": "01_erisim.md#kapatis",
+              "chunk_id": "a90b05c2f6e056c14396",
+              "score": 0.901643
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 0.3333333333333333,
+            "ndcg": 0.5,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.067,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d08",
+          "question": "Bir deneyin yeniden üretilebilmesi için hangi sürümler yazılır?",
+          "category": "procedure",
+          "relevant": [
+            "06_proje.md#surum"
+          ],
+          "retrieved": [
+            {
+              "section_id": "06_proje.md#surum",
+              "chunk_id": "8bf970990dcbe058ed8d",
+              "score": 2.771913
+            },
+            {
+              "section_id": "06_proje.md#teslim",
+              "chunk_id": "508e1cc284bf56f3fa0d",
+              "score": 2.268622
+            },
+            {
+              "section_id": "03_rag.md#guncelleme",
+              "chunk_id": "890d8ea133f7a18033c8",
+              "score": 2.245246
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.042,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d09",
+          "question": "Planlı bakım ne zaman yapılır?",
+          "category": "direct",
+          "relevant": [
+            "07_isletim.md#bakim"
+          ],
+          "retrieved": [
+            {
+              "section_id": "07_isletim.md#bakim",
+              "chunk_id": "962a327e6c8bfc0c2ae9",
+              "score": 8.135547
+            },
+            {
+              "section_id": "01_erisim.md#rezervasyon",
+              "chunk_id": "75b8639cf35004a4d00f",
+              "score": 3.914988
+            },
+            {
+              "section_id": "04_olcum.md#bolme",
+              "chunk_id": "53769e2b0123b06f620d",
+              "score": 1.978308
+            },
+            {
+              "section_id": "07_isletim.md#ariza",
+              "chunk_id": "8401b85e230975a80da4",
+              "score": 1.978308
+            },
+            {
+              "section_id": "05_inference.md#hata",
+              "chunk_id": "ab0eb4c68b2d8b1ab1c5",
+              "score": 1.937113
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.045,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d10",
+          "question": "Demo hangi portta açılır?",
+          "category": "direct",
+          "relevant": [
+            "08_ag.md#port"
+          ],
+          "retrieved": [
+            {
+              "section_id": "06_proje.md#karsilastirma",
+              "chunk_id": "3127154ce4c7c93c43c4",
+              "score": 2.861285
+            },
+            {
+              "section_id": "08_ag.md#port",
+              "chunk_id": "523024dec899411d36d7",
+              "score": 2.419786
+            },
+            {
+              "section_id": "08_ag.md#depolama",
+              "chunk_id": "b60f95f4dc189337597c",
+              "score": 2.367208
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 0.5,
+            "ndcg": 0.6309297535714575,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.033,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d11",
+          "question": "Oturum kapanırken ne yapılır ve yedek nasıl kontrol edilir?",
+          "category": "multi",
+          "relevant": [
+            "01_erisim.md#kapatis",
+            "07_isletim.md#yedek"
+          ],
+          "retrieved": [
+            {
+              "section_id": "05_inference.md#hata",
+              "chunk_id": "ab0eb4c68b2d8b1ab1c5",
+              "score": 4.537245
+            },
+            {
+              "section_id": "02_veri.md#paylasim",
+              "chunk_id": "1f83ee1c4163ede84a88",
+              "score": 4.444692
+            },
+            {
+              "section_id": "01_erisim.md#kapatis",
+              "chunk_id": "a90b05c2f6e056c14396",
+              "score": 4.13089
+            },
+            {
+              "section_id": "07_isletim.md#yedek",
+              "chunk_id": "1cc70b7941f1dcd9a6a6",
+              "score": 4.006557
+            },
+            {
+              "section_id": "04_olcum.md#bolme",
+              "chunk_id": "53769e2b0123b06f620d",
+              "score": 1.978308
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 0.3333333333333333,
+            "ndcg": 0.5706417189553201,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.054,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d12",
+          "question": "İndeks belge güncellenince nasıl değişir?",
+          "category": "procedure",
+          "relevant": [
+            "03_rag.md#guncelleme"
+          ],
+          "retrieved": [
+            {
+              "section_id": "03_rag.md#guncelleme",
+              "chunk_id": "890d8ea133f7a18033c8",
+              "score": 10.91028
+            },
+            {
+              "section_id": "02_veri.md#paylasim",
+              "chunk_id": "1f83ee1c4163ede84a88",
+              "score": 2.108658
+            },
+            {
+              "section_id": "03_rag.md#kaynak",
+              "chunk_id": "aeb9187419eaa99f972c",
+              "score": 1.50749
+            },
+            {
+              "section_id": "07_isletim.md#yedek",
+              "chunk_id": "1cc70b7941f1dcd9a6a6",
+              "score": 1.50749
+            },
+            {
+              "section_id": "03_rag.md#parcalama",
+              "chunk_id": "1919b44e72097a7dc480",
+              "score": 1.461364
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.043,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d13",
+          "question": "Laboratuvar sorumlusunun telefon numarası nedir?",
+          "category": "unanswerable_near",
+          "relevant": [],
+          "retrieved": [
+            {
+              "section_id": "02_veri.md#kisisel",
+              "chunk_id": "66ac5acf676584b5799f",
+              "score": 6.867795
+            },
+            {
+              "section_id": "02_veri.md#paylasim",
+              "chunk_id": "1f83ee1c4163ede84a88",
+              "score": 2.71537
+            },
+            {
+              "section_id": "07_isletim.md#ariza",
+              "chunk_id": "8401b85e230975a80da4",
+              "score": 2.316867
+            },
+            {
+              "section_id": "01_erisim.md#giris",
+              "chunk_id": "dc07a000c3b3757fea1b",
+              "score": 2.292491
+            }
+          ],
+          "metrics": null,
+          "negative_has_candidates": true,
+          "latency_ms": 0.077,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d14",
+          "question": "GPU rezervasyonunun saatlik ücreti kaç lira?",
+          "category": "unanswerable_near",
+          "relevant": [],
+          "retrieved": [
+            {
+              "section_id": "01_erisim.md#rezervasyon",
+              "chunk_id": "75b8639cf35004a4d00f",
+              "score": 5.601004
+            },
+            {
+              "section_id": "01_erisim.md#kapatis",
+              "chunk_id": "a90b05c2f6e056c14396",
+              "score": 2.924139
+            },
+            {
+              "section_id": "01_erisim.md#giris",
+              "chunk_id": "dc07a000c3b3757fea1b",
+              "score": 2.799927
+            },
+            {
+              "section_id": "07_isletim.md#bakim",
+              "chunk_id": "962a327e6c8bfc0c2ae9",
+              "score": 1.999569
+            }
+          ],
+          "metrics": null,
+          "negative_has_candidates": true,
+          "latency_ms": 0.045,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d15",
+          "question": "Jüpiter gezegeninin kaç uydusu var?",
+          "category": "unanswerable_out",
+          "relevant": [],
+          "retrieved": [],
+          "metrics": null,
+          "negative_has_candidates": false,
+          "latency_ms": 0.025,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d16",
+          "question": "Üniversitede işe girmek için ALES ve YDS taban puanı kaçtır?",
+          "category": "unanswerable_near",
+          "relevant": [],
+          "retrieved": [],
+          "metrics": null,
+          "negative_has_candidates": false,
+          "latency_ms": 0.039,
+          "llm_calls": 0,
+          "query_trace": []
+        }
+      ]
+    },
+    "lexical": {
+      "summary": {
+        "recall@5": 1.0,
+        "mrr@5": 1.0,
+        "ndcg@5": 0.9875,
+        "all_evidence_sections@5": 1,
+        "evidence_recall@5": 1.0,
+        "answerable_count": 12,
+        "unanswerable_count": 4,
+        "negative_candidate_rate": 1,
+        "latency_p50_ms": 0.205,
+        "latency_p95_ms": 0.303,
+        "llm_calls": 0
+      },
+      "queries": [
+        {
+          "id": "d01",
+          "question": "GPU rezervasyonu kaç saat sürebilir?",
+          "category": "direct",
+          "relevant": [
+            "01_erisim.md#rezervasyon"
+          ],
+          "retrieved": [
+            {
+              "section_id": "01_erisim.md#rezervasyon",
+              "chunk_id": "75b8639cf35004a4d00f",
+              "score": 0.032787
+            },
+            {
+              "section_id": "07_isletim.md#bakim",
+              "chunk_id": "962a327e6c8bfc0c2ae9",
+              "score": 0.032002
+            },
+            {
+              "section_id": "01_erisim.md#giris",
+              "chunk_id": "dc07a000c3b3757fea1b",
+              "score": 0.031498
+            },
+            {
+              "section_id": "01_erisim.md#kapatis",
+              "chunk_id": "a90b05c2f6e056c14396",
+              "score": 0.016129
+            },
+            {
+              "section_id": "06_proje.md#surum",
+              "chunk_id": "8bf970990dcbe058ed8d",
+              "score": 0.015385
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.18,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d02",
+          "question": "İlk laboratuvar erişimi için hangi onay gerekir?",
+          "category": "direct",
+          "relevant": [
+            "01_erisim.md#giris"
+          ],
+          "retrieved": [
+            {
+              "section_id": "01_erisim.md#giris",
+              "chunk_id": "dc07a000c3b3757fea1b",
+              "score": 0.032787
+            },
+            {
+              "section_id": "07_isletim.md#ariza",
+              "chunk_id": "8401b85e230975a80da4",
+              "score": 0.032258
+            },
+            {
+              "section_id": "01_erisim.md#rezervasyon",
+              "chunk_id": "75b8639cf35004a4d00f",
+              "score": 0.030777
+            },
+            {
+              "section_id": "04_olcum.md#olumsuz",
+              "chunk_id": "d788c56e06108a1c4c5b",
+              "score": 0.03055
+            },
+            {
+              "section_id": "04_olcum.md#bolme",
+              "chunk_id": "53769e2b0123b06f620d",
+              "score": 0.03009
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.21,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d03",
+          "question": "Günlükler kaç gün saklanır?",
+          "category": "direct",
+          "relevant": [
+            "02_veri.md#saklama"
+          ],
+          "retrieved": [
+            {
+              "section_id": "02_veri.md#saklama",
+              "chunk_id": "4cd0ef32fec1433a6667",
+              "score": 0.032787
+            },
+            {
+              "section_id": "03_rag.md#guncelleme",
+              "chunk_id": "890d8ea133f7a18033c8",
+              "score": 0.032258
+            },
+            {
+              "section_id": "04_olcum.md#metrik",
+              "chunk_id": "1cab9ed4f1d94102223c",
+              "score": 0.015873
+            },
+            {
+              "section_id": "05_inference.md#bellek",
+              "chunk_id": "9fd31bcc540b04907891",
+              "score": 0.015625
+            },
+            {
+              "section_id": "08_ag.md#ortam",
+              "chunk_id": "b6e36608b1e57759492a",
+              "score": 0.015385
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.185,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d04",
+          "question": "Kişisel verileri model servisine göndermeden önce ne yapılır?",
+          "category": "procedure",
+          "relevant": [
+            "02_veri.md#kisisel"
+          ],
+          "retrieved": [
+            {
+              "section_id": "02_veri.md#kisisel",
+              "chunk_id": "66ac5acf676584b5799f",
+              "score": 0.032522
+            },
+            {
+              "section_id": "05_inference.md#baglanti",
+              "chunk_id": "2a19e7f6ac25ee197544",
+              "score": 0.032002
+            },
+            {
+              "section_id": "05_inference.md#hata",
+              "chunk_id": "ab0eb4c68b2d8b1ab1c5",
+              "score": 0.031545
+            },
+            {
+              "section_id": "07_isletim.md#ariza",
+              "chunk_id": "8401b85e230975a80da4",
+              "score": 0.030777
+            },
+            {
+              "section_id": "06_proje.md#karsilastirma",
+              "chunk_id": "3127154ce4c7c93c43c4",
+              "score": 0.030118
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.273,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d05",
+          "question": "Parçalama deneyinde kaç kelime örtüşme kullanılır?",
+          "category": "numeric",
+          "relevant": [
+            "03_rag.md#parcalama"
+          ],
+          "retrieved": [
+            {
+              "section_id": "03_rag.md#parcalama",
+              "chunk_id": "1919b44e72097a7dc480",
+              "score": 0.032787
+            },
+            {
+              "section_id": "08_ag.md#depolama",
+              "chunk_id": "b60f95f4dc189337597c",
+              "score": 0.029828
+            },
+            {
+              "section_id": "02_veri.md#kisisel",
+              "chunk_id": "66ac5acf676584b5799f",
+              "score": 0.029762
+            },
+            {
+              "section_id": "05_inference.md#bellek",
+              "chunk_id": "9fd31bcc540b04907891",
+              "score": 0.016129
+            },
+            {
+              "section_id": "08_ag.md#port",
+              "chunk_id": "523024dec899411d36d7",
+              "score": 0.015873
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.236,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d06",
+          "question": "MRR neyi ölçer?",
+          "category": "direct",
+          "relevant": [
+            "04_olcum.md#metrik"
+          ],
+          "retrieved": [
+            {
+              "section_id": "04_olcum.md#metrik",
+              "chunk_id": "1cab9ed4f1d94102223c",
+              "score": 0.032787
+            },
+            {
+              "section_id": "03_rag.md#parcalama",
+              "chunk_id": "1919b44e72097a7dc480",
+              "score": 0.016129
+            },
+            {
+              "section_id": "05_inference.md#bellek",
+              "chunk_id": "9fd31bcc540b04907891",
+              "score": 0.015873
+            },
+            {
+              "section_id": "06_proje.md#surum",
+              "chunk_id": "8bf970990dcbe058ed8d",
+              "score": 0.015625
+            },
+            {
+              "section_id": "03_rag.md#guncelleme",
+              "chunk_id": "890d8ea133f7a18033c8",
+              "score": 0.015385
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.107,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d07",
+          "question": "Model belleğinde ağırlıklar dışında neler yer kaplar?",
+          "category": "paraphrase",
+          "relevant": [
+            "05_inference.md#bellek"
+          ],
+          "retrieved": [
+            {
+              "section_id": "05_inference.md#bellek",
+              "chunk_id": "9fd31bcc540b04907891",
+              "score": 0.032266
+            },
+            {
+              "section_id": "08_ag.md#ortam",
+              "chunk_id": "b6e36608b1e57759492a",
+              "score": 0.031281
+            },
+            {
+              "section_id": "05_inference.md#baglanti",
+              "chunk_id": "2a19e7f6ac25ee197544",
+              "score": 0.030478
+            },
+            {
+              "section_id": "05_inference.md#hata",
+              "chunk_id": "ab0eb4c68b2d8b1ab1c5",
+              "score": 0.030415
+            },
+            {
+              "section_id": "07_isletim.md#yedek",
+              "chunk_id": "1cc70b7941f1dcd9a6a6",
+              "score": 0.030118
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.258,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d08",
+          "question": "Bir deneyin yeniden üretilebilmesi için hangi sürümler yazılır?",
+          "category": "procedure",
+          "relevant": [
+            "06_proje.md#surum"
+          ],
+          "retrieved": [
+            {
+              "section_id": "06_proje.md#surum",
+              "chunk_id": "8bf970990dcbe058ed8d",
+              "score": 0.032522
+            },
+            {
+              "section_id": "03_rag.md#guncelleme",
+              "chunk_id": "890d8ea133f7a18033c8",
+              "score": 0.031498
+            },
+            {
+              "section_id": "06_proje.md#teslim",
+              "chunk_id": "508e1cc284bf56f3fa0d",
+              "score": 0.030622
+            },
+            {
+              "section_id": "02_veri.md#saklama",
+              "chunk_id": "4cd0ef32fec1433a6667",
+              "score": 0.016393
+            },
+            {
+              "section_id": "02_veri.md#paylasim",
+              "chunk_id": "1f83ee1c4163ede84a88",
+              "score": 0.015873
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.295,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d09",
+          "question": "Planlı bakım ne zaman yapılır?",
+          "category": "direct",
+          "relevant": [
+            "07_isletim.md#bakim"
+          ],
+          "retrieved": [
+            {
+              "section_id": "07_isletim.md#bakim",
+              "chunk_id": "962a327e6c8bfc0c2ae9",
+              "score": 0.032787
+            },
+            {
+              "section_id": "01_erisim.md#rezervasyon",
+              "chunk_id": "75b8639cf35004a4d00f",
+              "score": 0.032258
+            },
+            {
+              "section_id": "07_isletim.md#ariza",
+              "chunk_id": "8401b85e230975a80da4",
+              "score": 0.030777
+            },
+            {
+              "section_id": "05_inference.md#hata",
+              "chunk_id": "ab0eb4c68b2d8b1ab1c5",
+              "score": 0.02967
+            },
+            {
+              "section_id": "04_olcum.md#bolme",
+              "chunk_id": "53769e2b0123b06f620d",
+              "score": 0.029572
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.196,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d10",
+          "question": "Demo hangi portta açılır?",
+          "category": "direct",
+          "relevant": [
+            "08_ag.md#port"
+          ],
+          "retrieved": [
+            {
+              "section_id": "08_ag.md#port",
+              "chunk_id": "523024dec899411d36d7",
+              "score": 0.032522
+            },
+            {
+              "section_id": "08_ag.md#depolama",
+              "chunk_id": "b60f95f4dc189337597c",
+              "score": 0.032002
+            },
+            {
+              "section_id": "06_proje.md#karsilastirma",
+              "chunk_id": "3127154ce4c7c93c43c4",
+              "score": 0.031778
+            },
+            {
+              "section_id": "01_erisim.md#giris",
+              "chunk_id": "dc07a000c3b3757fea1b",
+              "score": 0.015873
+            },
+            {
+              "section_id": "05_inference.md#baglanti",
+              "chunk_id": "2a19e7f6ac25ee197544",
+              "score": 0.015625
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.141,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d11",
+          "question": "Oturum kapanırken ne yapılır ve yedek nasıl kontrol edilir?",
+          "category": "multi",
+          "relevant": [
+            "01_erisim.md#kapatis",
+            "07_isletim.md#yedek"
+          ],
+          "retrieved": [
+            {
+              "section_id": "01_erisim.md#kapatis",
+              "chunk_id": "a90b05c2f6e056c14396",
+              "score": 0.032266
+            },
+            {
+              "section_id": "02_veri.md#paylasim",
+              "chunk_id": "1f83ee1c4163ede84a88",
+              "score": 0.032258
+            },
+            {
+              "section_id": "05_inference.md#hata",
+              "chunk_id": "ab0eb4c68b2d8b1ab1c5",
+              "score": 0.031778
+            },
+            {
+              "section_id": "03_rag.md#guncelleme",
+              "chunk_id": "890d8ea133f7a18033c8",
+              "score": 0.030798
+            },
+            {
+              "section_id": "07_isletim.md#yedek",
+              "chunk_id": "1cc70b7941f1dcd9a6a6",
+              "score": 0.030777
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 0.8503449055347546,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.254,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d12",
+          "question": "İndeks belge güncellenince nasıl değişir?",
+          "category": "procedure",
+          "relevant": [
+            "03_rag.md#guncelleme"
+          ],
+          "retrieved": [
+            {
+              "section_id": "03_rag.md#guncelleme",
+              "chunk_id": "890d8ea133f7a18033c8",
+              "score": 0.032787
+            },
+            {
+              "section_id": "02_veri.md#paylasim",
+              "chunk_id": "1f83ee1c4163ede84a88",
+              "score": 0.031514
+            },
+            {
+              "section_id": "07_isletim.md#yedek",
+              "chunk_id": "1cc70b7941f1dcd9a6a6",
+              "score": 0.031498
+            },
+            {
+              "section_id": "03_rag.md#kaynak",
+              "chunk_id": "aeb9187419eaa99f972c",
+              "score": 0.029958
+            },
+            {
+              "section_id": "03_rag.md#parcalama",
+              "chunk_id": "1919b44e72097a7dc480",
+              "score": 0.02967
+            }
+          ],
+          "metrics": {
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0,
+            "all_evidence_sections": 1,
+            "evidence_recall": 1.0
+          },
+          "negative_has_candidates": null,
+          "latency_ms": 0.2,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d13",
+          "question": "Laboratuvar sorumlusunun telefon numarası nedir?",
+          "category": "unanswerable_near",
+          "relevant": [],
+          "retrieved": [
+            {
+              "section_id": "02_veri.md#kisisel",
+              "chunk_id": "66ac5acf676584b5799f",
+              "score": 0.032266
+            },
+            {
+              "section_id": "01_erisim.md#giris",
+              "chunk_id": "dc07a000c3b3757fea1b",
+              "score": 0.032018
+            },
+            {
+              "section_id": "07_isletim.md#ariza",
+              "chunk_id": "8401b85e230975a80da4",
+              "score": 0.032002
+            },
+            {
+              "section_id": "02_veri.md#paylasim",
+              "chunk_id": "1f83ee1c4163ede84a88",
+              "score": 0.031754
+            },
+            {
+              "section_id": "05_inference.md#baglanti",
+              "chunk_id": "2a19e7f6ac25ee197544",
+              "score": 0.015385
+            }
+          ],
+          "metrics": null,
+          "negative_has_candidates": true,
+          "latency_ms": 0.253,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d14",
+          "question": "GPU rezervasyonunun saatlik ücreti kaç lira?",
+          "category": "unanswerable_near",
+          "relevant": [],
+          "retrieved": [
+            {
+              "section_id": "01_erisim.md#rezervasyon",
+              "chunk_id": "75b8639cf35004a4d00f",
+              "score": 0.032787
+            },
+            {
+              "section_id": "01_erisim.md#giris",
+              "chunk_id": "dc07a000c3b3757fea1b",
+              "score": 0.032002
+            },
+            {
+              "section_id": "01_erisim.md#kapatis",
+              "chunk_id": "a90b05c2f6e056c14396",
+              "score": 0.032002
+            },
+            {
+              "section_id": "07_isletim.md#bakim",
+              "chunk_id": "962a327e6c8bfc0c2ae9",
+              "score": 0.03125
+            },
+            {
+              "section_id": "07_isletim.md#yedek",
+              "chunk_id": "1cc70b7941f1dcd9a6a6",
+              "score": 0.015385
+            }
+          ],
+          "metrics": null,
+          "negative_has_candidates": true,
+          "latency_ms": 0.2,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d15",
+          "question": "Jüpiter gezegeninin kaç uydusu var?",
+          "category": "unanswerable_out",
+          "relevant": [],
+          "retrieved": [
+            {
+              "section_id": "04_olcum.md#olumsuz",
+              "chunk_id": "d788c56e06108a1c4c5b",
+              "score": 0.016393
+            },
+            {
+              "section_id": "01_erisim.md#giris",
+              "chunk_id": "dc07a000c3b3757fea1b",
+              "score": 0.016129
+            },
+            {
+              "section_id": "06_proje.md#karsilastirma",
+              "chunk_id": "3127154ce4c7c93c43c4",
+              "score": 0.015873
+            },
+            {
+              "section_id": "03_rag.md#kaynak",
+              "chunk_id": "aeb9187419eaa99f972c",
+              "score": 0.015625
+            },
+            {
+              "section_id": "03_rag.md#guncelleme",
+              "chunk_id": "890d8ea133f7a18033c8",
+              "score": 0.015385
+            }
+          ],
+          "metrics": null,
+          "negative_has_candidates": true,
+          "latency_ms": 0.161,
+          "llm_calls": 0,
+          "query_trace": []
+        },
+        {
+          "id": "d16",
+          "question": "Üniversitede işe girmek için ALES ve YDS taban puanı kaçtır?",
+          "category": "unanswerable_near",
+          "relevant": [],
+          "retrieved": [
+            {
+              "section_id": "02_veri.md#kisisel",
+              "chunk_id": "66ac5acf676584b5799f",
+              "score": 0.016393
+            },
+            {
+              "section_id": "08_ag.md#depolama",
+              "chunk_id": "b60f95f4dc189337597c",
+              "score": 0.016129
+            },
+            {
+              "section_id": "06_proje.md#karsilastirma",
+              "chunk_id": "3127154ce4c7c93c43c4",
+              "score": 0.015873
+            },
+            {
+              "section_id": "07_isletim.md#yedek",
+              "chunk_id": "1cc70b7941f1dcd9a6a6",
+              "score": 0.015625
+            },
+            {
+              "section_id": "04_olcum.md#olumsuz",
+              "chunk_id": "d788c56e06108a1c4c5b",
+              "score": 0.015385
+            }
+          ],
+          "metrics": null,
+          "negative_has_candidates": true,
+          "latency_ms": 0.303,
+          "llm_calls": 0,
+          "query_trace": []
+        }
+      ]
+    }
+  }
+}
